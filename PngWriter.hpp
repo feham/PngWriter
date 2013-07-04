@@ -120,7 +120,7 @@ private:
 
     // Some bits per pixel notes: 16 does not work with blockbuster, and there are also 
     // issues with PNG_COLOR_TYPE_GRAY interpretation, so stick to 8 and PNG_COLOR_TYPE_RGB
-    // for now. Note that if you do use 16, pay attention to MSB/LSB order. Endien is 
+    // for now. Note that if you do use 16, pay attention to MSB/LSB order. Endian is 
     // flipped on my linux workstation...
     
     png_write_info(png_ptr, info_ptr);
