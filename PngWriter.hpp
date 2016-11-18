@@ -85,7 +85,7 @@ public:
         buffer[(ny - j - 1) * nx + i][2] = b;
     }
 
-    void write(std::string filename) {
+    void write(const std::string &filename) {
 
         // note: we completely skip any error handling treatment here for simplicity.
 
