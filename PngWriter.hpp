@@ -129,7 +129,7 @@ public:
 
         // set up row pointers to point into the raw image data in buffer...
 
-        png_byte *row_pointers[ny];
+        png_byte **row_pointers = new png_byte *[ny];
         for (int i = 0; i < ny; ++i)
             row_pointers[i] = (png_byte *) (buffer + i * nx);
 
@@ -139,6 +139,7 @@ public:
 
         png_destroy_write_struct(&png_ptr, &info_ptr);
 
+        delete[] row_pointers;
         fclose(fp);
 
         // leave the image data in buffer to allow the calling process to change it and/or
