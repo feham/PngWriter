@@ -83,7 +83,7 @@ private:
     buffer[(ny-j-1)*nx+i][2] = b;
   }
   
-  void write(char * filename) {
+  void write(const char * filename) {
 
     // note: we completely skip any error handling treatment here for simplicity.
     
